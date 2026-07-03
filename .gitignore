@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude / agent tooling (kept local, not published)
+.claude/
+CLAUDE.md
+AGENTS.md
+.mcp.json
