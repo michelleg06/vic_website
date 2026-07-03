@@ -28,23 +28,23 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Scripts:
 
-| Command         | Description                              |
-| --------------- | ---------------------------------------- |
-| `npm run dev`   | Start the dev server (Turbopack)         |
-| `npm run build` | Production build (also type-checks)      |
-| `npm run start` | Serve the production build               |
-| `npm run lint`  | Run ESLint                               |
+| Command           | Description                         |
+| ----------------- | ----------------------------------- |
+| `npm run dev`   | Start the dev server (Turbopack)    |
+| `npm run build` | Production build (also type-checks) |
+| `npm run start` | Serve the production build          |
+| `npm run lint`  | Run ESLint                          |
 
 ## Pages & architecture
 
 A **hybrid** structure: a story-driven landing page, plus two dedicated routes for the heaviest /
 most link-worthy sections.
 
-| Route            | Contents                                                                                 |
-| ---------------- | ---------------------------------------------------------------------------------------- |
-| `/`              | Hero → Stats → About → Temas → **Explora el Programa** → Prensa                           |
-| `/posters`       | Full poster gallery (PDF previews, by year, click-to-download)                            |
-| `/convocatorias` | Open call / "Convocatoria abierta" (participation details + contact)                      |
+| Route              | Contents                                                                  |
+| ------------------ | ------------------------------------------------------------------------- |
+| `/`              | Hero → Stats → About → Temas →**Explora el Programa** → Prensa |
+| `/posters`       | Full poster gallery (PDF previews, by year, click-to-download)            |
+| `/convocatorias` | Open call / "Convocatoria abierta" (participation details + contact)      |
 
 The shared shell — `Header`, the bottom `Greca` divider, and `SiteFooter` — lives in
 `src/app/layout.tsx`, so it wraps every route. Navigation uses hash links (`/#about`, `/#temas`, …)
@@ -109,5 +109,4 @@ public/
 - The theme palette is defined once in `src/app/globals.css` under `@theme` (coral `#f0523d`,
   navy `#1f2a60`, cream `#fff8ee`, gold `#e0a92e`, plus a coral choropleth ramp).
 - Animations respect `prefers-reduced-motion`.
-- Poster "download" cards link to the local PDF; if a poster has an original PDF only on the source
-  site, it links out to `vic.tlacua.cloud`.
+- Poster "download" cards link to the local PDF.
